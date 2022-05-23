@@ -1,5 +1,5 @@
 {
-    "name":"umibu",
-    "description":"umibu",
-    "image":"umibu.jpg"
+  "name": "umibu",
+  "description": "umibu",
+  "image": "https://raw.githubusercontent.com/joeldevz/ERC-1155/main/img/umibu.png"
 }

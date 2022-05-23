@@ -22,14 +22,14 @@ contract TokenUmibu is ERC1155, Ownable {
         temp = temp+1;
         return temp;
     }
-    function mint( uint256 _amount, string memory _hashIpfs)public {
+    function mint( uint256 _amount, string memory _ip)public {
         uint256 _idsTem = NextId();
         require(_idsTem >= GetId(), "ya existe, intentalo de nuevo");
         ids.increment();
         _mint(msg.sender, GetId(), _amount, "");
-        hashIpfs[_idsTem]=_hashIpfs;
+        hashIpfs[_idsTem]=_ip;
     } 
-    
+
     modifier securityFrontRunning(uint256 nftID) {
         require(
             security[nftID] == 0 ||
